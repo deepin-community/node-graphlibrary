@@ -1,0 +1,8 @@
+graphlibrary for Debian
+-----------------------
+
+The module was initially a package of upstream: graphlibrary.
+Graphlibrary itself is a fork of graphlib.
+Since for new packages, graphlib is more relevant and updated, the upstream has been changed to graphlib instead.
+
+  -- Nilesh Patra <npatra974@gmail.com>  Thu, 19 Mar 2020 01:44:10 +0530

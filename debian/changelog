@@ -1,0 +1,51 @@
+node-graphlibrary (2.2.0+really2.1.8+dfsg-3) unstable; urgency=medium
+
+  * Drop deprecated options of node-resolve plugin
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 02 Jan 2021 14:52:35 +0530
+
+node-graphlibrary (2.2.0+really2.1.8+dfsg-2) unstable; urgency=medium
+
+  * Drop legacy node-resolve and commonjs plugin usage
+  * Bump Standards-Version to 4.5.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Dec 2020 13:41:06 +0530
+
+node-graphlibrary (2.2.0+really2.1.8+dfsg-1) unstable; urgency=medium
+
+  * Modify watch to point to new upstream
+  * New upstream version 2.2.0+really2.1.8+dfsg
+    + version changes: graphlib is at version 2.1.8,
+      graphlibrary is at version 2.2.0,
+      since in current scenario graphlib is needed, the version is lowered
+  * Add provides, fix control with cme
+  * Bump standards version to 4.5.0
+  * Add "Rules-Requires-Root:no"
+  * Use rollup as bundler, generate minified files with terser
+  * Install dist
+  * Add a simple autopkgtest
+  * Add myself to uploaders
+  * Update upstream/metadata
+  * Fix copyright
+  * Fix homepage and description
+  * Add README.Debian to explain the current state of package
+
+ -- Nilesh Patra <npatra974@gmail.com>  Thu, 19 Mar 2020 01:47:20 +0530
+
+node-graphlibrary (2.2.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.0
+  * Add debian/gbp.conf
+  * Update debian/watch to use npm registry
+  * Add upstream/metadata
+  * Switch install and minimal test to pkg-js-tools (fixes debci)
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 20 Sep 2019 03:42:05 +0200
+
+node-graphlibrary (2.2.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #909293)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 21 Sep 2018 13:08:11 +0530

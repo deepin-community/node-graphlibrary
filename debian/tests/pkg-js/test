@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -e
+
+cat >foo.js <<HERE
+var Graph = require(".").Graph;
+var assert = require("assert")
+var g = new Graph();
+
+describe("Checking tests", function() {
+
+it("If graph has node", function(){
+g.setNode("a");
+assert.equal(g.hasNode("a"), true, "Not ok");
+});
+
+it("checking b's value", function(){
+g.setNode("b", "b's value");
+assert.equal(g.node("b"), "b's value", "Not ok");
+});
+
+it("checking graph's nodes", function(){
+g.setNode("c", { k: 123 });
+assert.deepEqual(g.nodes(), [ 'a', 'b', 'c' ], "Not ok");
+});
+
+it("checking graph's edges", function(){
+g.setEdge("a", "b");
+g.setEdge("c", "d", { k: 456 });
+assert.deepEqual(g.edges(), [ { v: 'a', w: 'b' }, { v: 'c', w: 'd' } ], "Not ok");
+assert.deepEqual(g.outEdges("a"), [ { v: 'a', w: 'b' } ], "Not ok");
+assert.deepEqual(g.nodeEdges("d"), [ { v: 'c', w: 'd' } ]);
+
+});
+});
+HERE
+
+mocha -R spec foo.js
+rm -f ./foo.js
