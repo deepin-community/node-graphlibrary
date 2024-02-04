@@ -2,6 +2,7 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: graphlibrary
 Upstream-Contact: https://github.com/dagrejs/graphlib/issues
 Source: https://github.com/dagrejs/graphlib#readme
+ https://registry.npmjs.org/@types/graphlib
 Files-Excluded: dist
 
 Files: *
@@ -10,6 +11,10 @@ License: Expat
 
 Files: debian/*
 Copyright: 2018, Pirate Praveen <praveen@debian.org>
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat
@@ -32,4 +37,3 @@ License: Expat
  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-

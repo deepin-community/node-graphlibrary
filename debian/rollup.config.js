@@ -1,6 +1,6 @@
-var nodeResolve = require('@rollup/plugin-node-resolve').nodeResolve;
-var buble = require('rollup-plugin-buble');
-var cjs = require('@rollup/plugin-commonjs');
+const nodeResolve = require('@rollup/plugin-node-resolve').nodeResolve;
+const buble = require('rollup-plugin-buble');
+const cjs = require('@rollup/plugin-commonjs');
 
 const config = {
   output: {
@@ -11,7 +11,7 @@ const config = {
     buble(),
     nodeResolve(
      {
-        moduleDirectories: ['/usr/share/nodejs'],
+        modulePaths: ['/usr/share/nodejs'],
         preferBuiltins: false
      }
     ),
@@ -19,6 +19,6 @@ const config = {
   ]
 };
 
-export default [
+module.exports = [
   config
 ];
