@@ -1,33 +1,32 @@
 Source: node-graphlibrary
-Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
-Uploaders: Pirate Praveen <praveen@debian.org>, Nilesh Patra <npatra974@gmail.com>
 Section: javascript
-Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
-               nodejs (>= 6),
-               node-lodash (>= 4.17.5) <!nocheck>,
-               pkg-js-tools (>= 0.9.26),
-               rollup,
-               uglifyjs.terser,
-               node-rollup-plugin-node-resolve (>= 11~),
-               node-rollup-plugin-buble,
-               node-rollup-plugin-commonjs (>= 15~),
-               node-mocha,
-Standards-Version: 4.5.1
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+ , Nilesh Patra <nilesh@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-lodash <!nocheck>
+ , node-mocha
+ , node-rollup-plugin-buble
+ , node-rollup-plugin-commonjs (>= 15~)
+ , node-rollup-plugin-node-resolve (>= 11~)
+ , rollup
+ , terser
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-graphlibrary
 Vcs-Git: https://salsa.debian.org/js-team/node-graphlibrary.git
-Homepage: https://github.com/dagrejs/graphlib#readme
+Homepage: https://github.com/dagrejs/graphlib
+Testsuite: autopkgtest-pkg-nodejs
 Rules-Requires-Root: no
 
 Package: node-graphlibrary
 Architecture: all
-Provides: node-graphlib
-Depends: ${misc:Depends},
-         nodejs (>= 6),
-         node-lodash (>= 4.17.5),
-         node-mocha,
-         node-assert
+Depends: node-assert
+ , node-lodash
+ , node-mocha
+ , ${misc:Depends}
+Provides: ${nodejs:Provides}
 Description: directed and undirected multi-graph library
  Graphlibrary is a JavaScript library that provides data structures for
  undirected and directed multi-graphs along with algorithms that can be used

@@ -1,3 +1,52 @@
+node-graphlibrary (2.2.0+really2.1.8+repack-3) unstable; urgency=medium
+
+  * Team upload
+  * Fix rollup config for rollup 3 (Closes: #1022625)
+
+ -- Yadd <yadd@debian.org>  Wed, 26 Oct 2022 12:24:23 +0200
+
+node-graphlibrary (2.2.0+really2.1.8+repack-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix rollup configuration for recent @rollup/plugin-node-resolve
+    (Closes: #1022406)
+
+ -- Yadd <yadd@debian.org>  Sun, 23 Oct 2022 18:38:39 +0200
+
+node-graphlibrary (2.2.0+really2.1.8+repack-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+
+  [ Yadd ]
+  * Declare compliance with policy 4.6.1
+  * Drop dependency to nodejs
+  * download from GitHub, not from npm registry
+  * Embed typescript declarations and repack
+
+ -- Yadd <yadd@debian.org>  Tue, 02 Aug 2022 08:18:19 +0200
+
+node-graphlibrary (2.2.0+really2.1.8+dfsg-4) unstable; urgency=medium
+
+  * team upload
+
+  [ Nilesh Patra ]
+  * [skip ci] Update email
+
+  [ Yadd ]
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+
+  [ Jonas Smedegaard ]
+  * use and build-depend on terser (not uglifyjs.terser)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 02 Dec 2021 20:40:51 +0100
+
 node-graphlibrary (2.2.0+really2.1.8+dfsg-3) unstable; urgency=medium
 
   * Drop deprecated options of node-resolve plugin

@@ -1,5 +1,11 @@
 version=4
+opts=\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-graphlib-$1/ \
+ https://github.com/dagrejs/graphlib/tags .*/archive.*/v?([\d\.]+).tar.gz group
+
 # It is not recommended use npmregistry. Please investigate more.
 # Take a look at https://wiki.debian.org/debian/watch/
-opts="searchmode=plain,pgpmode=none,repacksuffix=+dfsg,dversionmangle=auto,oversionmangle=s/^2.1.8$/2.2.0+really2.1.8/" \
- https://registry.npmjs.org/graphlib https://registry.npmjs.org/graphlib/-/graphlib-(\d[\d\.]*)@ARCHIVE_EXT@
+opts="searchmode=plain,component=types-graphlib,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-graphlib-$1/" \
+ https://registry.npmjs.org/@types/graphlib https://registry.npmjs.org/@types/graphlib/-/graphlib-([\d\.]+)@ARCHIVE_EXT@ group

@@ -5,10 +5,10 @@
 export NODE_PATH := ${CURDIR}
 
 %:
-	dh $@ --with nodejs
+	dh $@
 
 override_dh_auto_build:
 	rollup -c debian/rollup.config.js lib/index.js -n graphlib -f umd -o dist/graphlib.js
 	rollup -c debian/rollup.config.js lib/index.js -f cjs -o dist/graphlib.core.js
-	uglifyjs.terser dist/graphlib.js -c -m -o dist/graphlib.min.js
-	uglifyjs.terser dist/graphlib.core.js -c -m -o dist/graphlib.core.min.js
+	terser dist/graphlib.js -c -m -o dist/graphlib.min.js
+	terser dist/graphlib.core.js -c -m -o dist/graphlib.core.min.js
